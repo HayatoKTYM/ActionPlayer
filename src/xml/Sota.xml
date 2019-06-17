@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<moduleContext>
+
+  <conf>
+    <moduleName>SotaActionPkayer</moduleName>
+    <description>action_palyer</description>
+  </conf>
+
+  <remote name="S_AM">
+    <group>sota</group>
+    <role>ActionManager</role>
+  </remote>
+
+  <remote name="S_PNS">
+    <group>sota</group>
+    <role>PersonNameServer</role>
+  </remote>
+
+  <local>
+    <property name="Head_P">
+        <value>""</value>     
+    </property>
+    <property name="Head_Y">
+        <value>""</value>     
+    </property>
+    <property name="Body_Y">
+        <value>""</value>     
+    </property>
+    <property name="Speaked_Content">
+        <value>""</value>     
+    </property>
+    <property name="tree">
+        <value>""</value>     
+    </property>
+
+    <method name="play">
+      <description></description>
+      <param name="layerName">
+         <description></description>
+      </param>
+      <param name="actionName">
+         <description></description>
+      </param>
+      <param name="x">
+         <description></description>
+      </param>
+      <param name="y">
+         <description></description>
+      </param>
+      <param name="keep">
+         <description>0</description>
+      </param>
+      <param name="autoend">
+         <description>0</description>
+      </param>
+      <param name="duration">
+         <description>0</description>
+      </param>
+      <param name="target">
+         <description>0</description>
+      </param>
+      <param name="content">
+         <description></description>
+      </param>
+    </method>
+
+    <method name="cancel">
+      <param name="layerName">
+         <description></description>
+      </param>
+    </method>
+
+  </local>
+
+
+  <disclosure>
+   <group>sota</group>
+   <role>ActionPlayer_Speak</role>
+   <propertyRef name="Speaked_Content"/>
+ </disclosure>
+
+  <disclosure>
+   <group>sota</group>
+   <role>ActionPlayer_Tree</role>
+    <propertyRef name="tree"/>
+ </disclosure>
+
+  <disclosure>
+   <group>sota</group>
+   <role>ActionPlayer</role>
+   <propertyRef name="state"/>
+   <propertyRef name="Head_Y"/>
+   <propertyRef name="Head_P"/>
+   <propertyRef name="Body_Y"/>
+ </disclosure>
+
+</moduleContext>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<moduleContext>
+
+  <conf>
+    <moduleName>SotaActionPlayer2</moduleName>
+    <description>action_palyer</description>
+  </conf>
+
+
+  <local>
+    <property name="status">
+        <value>""</value>
+    </property>
+    <property name="angle">
+        <value>""</value>
+    </property>
+    <property name="speaked_contents">
+        <value>""</value>
+    </property>
+
+
+    <method name="play">
+      <description></description>
+
+      <param name="x">
+         <description></description>
+      </param>
+      <param name="y">
+         <description></description>
+      </param>
+      <param name="z">
+         <description></description>
+      </param>
+      <param name="duration">
+         <description>0</description>
+      </param>
+      <param name="content">
+         <description></description>
+      </param>
+      <param name="actionName">
+         <description></description>
+      </param>
+      <param name="epock">
+         <description></description>
+      </param>
+    </method>
+
+    <method name="cancel">
+      <param name="actionName">
+         <description></description>
+      </param>
+    </method>
+
+  </local>
+
+
+  <disclosure>
+   <group>sota</group>
+   <role>ActionPlayer</role>
+   <propertyRef name="angle"/>
+ </disclosure>
+
+  <disclosure>
+   <group>sota</group>
+   <role>ActionPlayer_speak</role>
+   <propertyRef name="speaked_contents"/>
+ </disclosure>
+
+  <disclosure>
+   <group>sota</group>
+   <role>ActionPlayer_status</role>
+   <propertyRef name="status"/>
+ </disclosure>
+
+</moduleContext>
